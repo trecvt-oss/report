@@ -1,0 +1,28 @@
+% Author: Jason Ziglar <jpz@vt.edu>
+% Date: 10/22/2015
+% Very basic LaTeX template for interating with MultiMarkdown. This should read as the top part of the document.
+
+%metadata.tex is a file for injecting raw LaTeX metadata, which is sometimes required for academic papers.
+%As an example, authors sometimes require \thanks or \And which cannot be expressed from MMD metadata fields.
+%If the file doesn't exist, it isn't loaded.
+\IfFileExists{./metadata.tex}{\input{./metadata.tex}}{}
+
+\documentclass[12pt]{report}
+
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\begin{document}
+
+\mytitle
+\myauthor
+
+\maketitle
+
+% If an abstract has been defined, include it in the document. Otherwise, safely exclude the abstract.
+\ifx\myabstract\undefined
+\else
+\begin{abstract}
+\myabstract
+\end{abstract}
+\fi

@@ -1,0 +1,14 @@
+% Author: Jason Ziglar <jpz@vt.edu>
+% Example footer latex file, for use with the MultiMarkdown-LaTeX system.
+
+% This statement tests if a bibliography style has been defined, and if so, uses it.
+\ifx\bibliostyle\undefined
+\else
+  \bibliographystyle{\bibliostyle}
+\fi
+
+% This statement tests if a bibliography has been defined, and if so, uses it.
+\ifx\bibliocommand\undefined
+\else
+  \bibliocommand
+\fi
